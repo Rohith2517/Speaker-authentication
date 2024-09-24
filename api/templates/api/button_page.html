@@ -1,0 +1,39 @@
+
+<!-- templates/button_page.html -->
+<!--<!DOCTYPE html>
+<html>
+<head>
+    <title>Upload Audio</title>
+</head>
+<body>
+    <form action="/api/audio-verification/" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        Username: <input type="text" name="username" required><br>
+        Audio file: <input type="text" name="audiofile" required><br>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Audio Verification</title>
+</head>
+<body>
+    <h1>Recording was succesfull</h1>
+    <h4>Whom you claim to be</h4>
+    <form action="" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <label for="user_name">Username:</label>
+        <input type="text" id="user_name" name="user_name" required><br><br>
+        <button type="submit">Submit</button>
+    </form>
+    <!--{% if submitted %}
+        <h2>Results:</h2>
+        <p>Score: {{ score }}%</p>
+        <p>Prediction: {{ prediction }}</p>
+    {% endif %}-->
+</body>
+</html>

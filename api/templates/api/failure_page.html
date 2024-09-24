@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>FAILED</title>
+</head>
+<body>
+    <h1>Verification failed</h1>
+    <h2>Enroll or try loging in using password</h2>
+    <form action="" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <button type="submit" id="enroll">Enroll</button><br><br>
+        <label for="user_name">Username:</label>
+        <input type="text" id="user_name" name="user_name" ><br><br>
+        <label for="password">Password:</label>
+        <input type="text" id="password" name="password" ><br><br>
+        <button type="submit">Submit</button>
+    </form>
+    {% if submitted %}
+        <h2>Results:</h2>
+        <p>Score: {{ score }}%</p>
+        <p>Prediction: {{ prediction }}</p>
+    {% endif %}
+</body>
+</html>

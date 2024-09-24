@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Start Recording</title>
+</head>
+<body>
+    <h1>Start Audio Recording</h1>
+    <h2>Record your audio for 5 seconds</h2>
+    <form action="" method="post">
+        {% csrf_token %}
+        <!--<label for="duration">Duration (seconds):</label>
+        <input type="text" id="duration" name="duration" value="5"><br><br>
+        <label for="user_name">Username:</label>
+        <input type="text" id="user_name" name="user_name" required><br><br>-->
+        <button type="submit">Start Recording</button>
+    </form>
+    <!--{% if submitted %}
+        <h2>Results:</h2>
+        <p>Score: {{ score }}%</p>
+        <p>Prediction: {{ prediction }}</p>
+    {% endif %}-->
+</body>
+</html>

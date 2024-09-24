@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Enroll Speaker</title>
+</head>
+<body>
+    <h1>Enroll a New Speaker</h1>
+    <form method="post">
+        {% csrf_token %}
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" name="name" required><br>
+        <label for="passed">Password:</label><br>
+        <input type="text" id="passed" name="passed" required><br>
+        <br>
+        <p>Speak for 5 seconds to enroll</p>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
