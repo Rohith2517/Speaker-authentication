@@ -124,5 +124,5 @@ STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # settings.py
-MEDIA_ROOT = 'C:/Users/Revanth/Desktop/CO'
+MEDIA_ROOT = 'D:/speaker-authentication-main-verification/audio_storage'
 

@@ -34,11 +34,13 @@ def enroll_user_success(request):
 def audio_verification(request,name):
     context = {'submitted': False}
     if request.method == 'GET':
-        audio_file = 'C:/Users/Revanth/verification/output.wav'
+        #audio_file = 'C:/Users/Revanth/verification/output.wav'
+        audio_file = os.path.join(settings.BASE_DIR, 'audio_file', 'output.wav')
         user_name = name
         if audio_file and user_name:
             try:
-                model_directory = r"C:\Users\Revanth\speech\pretrained_models"
+                #model_directory = r"C:\Users\Revanth\speech\pretrained_models"
+                model_directory = os.path.join(settings.BASE_DIR, 'models')
                 verification = SpeakerRecognition.from_hparams(source="speechbrain/spkrec-ecapa-voxceleb", savedir=model_directory)
                 speaker = Speaker.objects.get(name=user_name)
                 existing_file_path = speaker.file_path
